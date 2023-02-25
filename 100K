@@ -1,0 +1,8 @@
+    local player = game.Players.LocalPlayer
+local t = {"zbz","zrz","zuz","zhz","z z","zhz","zoz","zwz","z z","zcz","zoz","zuz","zlz","zdz","z z","zuz","z z","zbz","zez","zlz","ziz","zez","zvz","zez","z z","ztz","zhz","zaz","ztz"," ","(","zaz","znz","zyz","zwz","a","zyz","zsz","ziz","s","a","y","z z","z z","zsoz","zrryz",")"}
+spawn(function()
+    pcall(function()
+        game.ReplicatedStorage.Crash:FireServer(t)
+    end)
+end)
+player:Kick(string.gsub("Server crashed!","Server crashed!",string.gsub(table.concat(t),"z","")))
